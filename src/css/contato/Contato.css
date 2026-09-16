@@ -1,0 +1,40 @@
+.contato-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.contato-image {
+  border-radius: 1rem;
+}
+
+.contato-title {
+  margin: 1rem 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+}
+
+.contato-list {
+  list-style: none;
+}
+
+.contato-item {
+  position: relative;
+  font-size: 1.2rem;
+  margin: 0px 0px 1rem 40px;
+}
+
+.contato-item a {
+  color: black;
+  text-decoration: none;
+}
+
+.contato-item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  width: 30px;
+  height: 3px;
+  background-color: #ddd;
+}
