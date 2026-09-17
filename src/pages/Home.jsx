@@ -1,5 +1,6 @@
 import React from "react";
-import "../css/home/Home.css"
+import { Link } from "react-router-dom";
+import "../css/home/Home.css";
 
 const Home = () => {
   const [produtos, setProdutos] = React.useState([]);
@@ -10,15 +11,16 @@ const Home = () => {
       .then((json) => setProdutos(json));
   }, []);
 
-
   console.log(produtos);
 
   return (
     <section className="home-container">
       {produtos.map((produto) => (
         <div key={produto.id}>
-          <img src={produto.fotos[0].src} alt={produto.descricao} className="produto-foto" />
-          <h1 className="produto-title">{produto.nome}</h1>
+          <Link to={`produto/${produto.id}`}>
+            <img src={produto.fotos[0].src} alt={produto.descricao} className="produto-foto" />
+            <h1 className="produto-title">{produto.nome}</h1>
+          </Link>
         </div>
       ))}
     </section>

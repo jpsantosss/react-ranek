@@ -1,0 +1,33 @@
+.produto-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.image-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.image-item img{
+  border-radius: 8px;
+}
+
+.produto-title {
+  margin: 1rem 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+}
+
+.produto-price {
+  background-color: #91FB5D;
+  color: #017E01;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.produto-description {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
