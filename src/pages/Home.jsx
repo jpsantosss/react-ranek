@@ -17,7 +17,7 @@ const Home = () => {
     <section className="home-container">
       {produtos.map((produto) => (
         <div key={produto.id}>
-          <Link to={`produto/${produto.id}`}>
+          <Link to={`produto/${produto.id}`} className="link-item">
             <img src={produto.fotos[0].src} alt={produto.descricao} className="produto-foto" />
             <h1 className="produto-title">{produto.nome}</h1>
           </Link>

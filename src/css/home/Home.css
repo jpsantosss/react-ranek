@@ -4,6 +4,10 @@
   gap: 2rem;
 }
 
+.link-item {
+  text-decoration: none;
+}
+
 .produto-foto {
   border-radius: 8px;
   margin-bottom: 0.275rem;
@@ -12,4 +16,5 @@
 .produto-title {
   font-size: 1.3rem;
   font-family: "Times New Roman", Times, serif;
+  color: black;
 }
