@@ -18,3 +18,9 @@
   font-family: "Times New Roman", Times, serif;
   color: black;
 }
+
+@media (max-width: 768px) {
+  .home-container {
+    grid-template-columns: 1fr;
+  } 
+}

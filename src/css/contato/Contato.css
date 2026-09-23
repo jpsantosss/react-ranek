@@ -38,3 +38,9 @@
   height: 3px;
   background-color: #ddd;
 }
+
+@media (max-width: 768px) {
+  .contato-container {
+    grid-template-columns: 1fr;
+  } 
+}
