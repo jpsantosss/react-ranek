@@ -11,7 +11,7 @@ const Home = () => {
   }, [request]);
 
   if (error) return <p>{error}</p>;
-  if (loading) return <p>Carregando...</p>;
+  if (loading) return <div className="spinner"></div>;
   if (data) return (
     <section className="home-container animeLeft">
       {data.map((data) => (

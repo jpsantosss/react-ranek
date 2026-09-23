@@ -12,7 +12,7 @@ const Produto = () => {
   }, [request, params]);
 
   if (error) return <p>{error}</p>;
-  if (loading) return <p>Carregando...</p>;
+  if (loading) return <div className="spinner"></div>;
   if (data) return (
     <div className="produto-container animeLeft">
       {data.fotos ? (
