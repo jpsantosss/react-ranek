@@ -31,7 +31,7 @@ const Produto = () => {
           </section>
         </>
       ) : (
-        <p>Carregando...</p>
+        <p>Houve um erro ao carregar o produto, tente novamente mais tarde.</p>
       )}
     </div>
   );
