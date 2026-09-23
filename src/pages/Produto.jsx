@@ -11,11 +11,6 @@ const Produto = () => {
     request(`https://ranekapi.origamid.dev/json/api/produto/${params.id}`);
   }, [request, params]);
 
-  // React.useEffect(() => {
-  //   fetch(`https://ranekapi.origamid.dev/json/api/produto/${params.id}`)
-  //     .then((response) => response.json())
-  //     .then((json) => setProduto(json));
-  // }, [params]);
   if (error) return <p>{error}</p>;
   if (loading) return <p>Carregando...</p>;
   if (data) return (
@@ -40,6 +35,7 @@ const Produto = () => {
       )}
     </div>
   );
+  else return null;
 };
 
 export default Produto;
