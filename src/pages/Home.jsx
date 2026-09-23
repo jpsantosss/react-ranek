@@ -1,30 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../css/home/Home.css";
+import useFetch from "../hooks/useFetch";
 
 const Home = () => {
-  const [produtos, setProdutos] = React.useState([]);
+  const { data, loading, error, request } = useFetch();
 
   React.useEffect(() => {
-    fetch("https://ranekapi.origamid.dev/json/api/produto")
-      .then((response) => response.json())
-      .then((json) => setProdutos(json));
-  }, []);
+    request("https://ranekapi.origamid.dev/json/api/produto");
+  }, [request]);
 
-  console.log(produtos);
-
-  return (
+  if (error) return <p>{error}</p>;
+  if (loading) return <p>Carregando...</p>;
+  if (data) return (
     <section className="home-container">
-      {produtos.map((produto) => (
-        <div key={produto.id}>
-          <Link to={`produto/${produto.id}`} className="link-item">
-            <img src={produto.fotos[0].src} alt={produto.descricao} className="produto-foto" />
-            <h1 className="produto-title">{produto.nome}</h1>
+      {data.map((data) => (
+        <div key={data.id}>
+          <Link to={`produto/${data.id}`} className="link-item">
+            <img src={data.fotos[0].src} alt={data.descricao} className="produto-foto" />
+            <h1 className="produto-title">{data.nome}</h1>
           </Link>
         </div>
       ))}
     </section>
   );
+  else return null;
 };
 
 export default Home;
