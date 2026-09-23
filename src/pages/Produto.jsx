@@ -14,7 +14,7 @@ const Produto = () => {
   if (error) return <p>{error}</p>;
   if (loading) return <p>Carregando...</p>;
   if (data) return (
-    <div className="produto-container">
+    <div className="produto-container animeLeft">
       {data.fotos ? (
         <>
           <section className="image-section">

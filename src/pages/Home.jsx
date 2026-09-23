@@ -13,7 +13,7 @@ const Home = () => {
   if (error) return <p>{error}</p>;
   if (loading) return <p>Carregando...</p>;
   if (data) return (
-    <section className="home-container">
+    <section className="home-container animeLeft">
       {data.map((data) => (
         <div key={data.id}>
           <Link to={`produto/${data.id}`} className="link-item">

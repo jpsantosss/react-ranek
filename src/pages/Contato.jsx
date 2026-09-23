@@ -3,7 +3,7 @@ import "../css/contato/Contato.css";
 
 const Contato = () => {
   return (
-    <div className="contato-container">
+    <div className="contato-container animeLeft">
       <img src={contatoImage} alt="Máquina de escrever" className="contato-image" />
       <section>
         <h1 className="contato-title">Entre em contato.</h1>
