@@ -6,7 +6,7 @@
 }
 
 body {
-  margin: 2rem;
+  margin-top: 2rem;
 }
 
 img {
@@ -16,6 +16,7 @@ img {
 .container {
   max-width: 40rem;
   margin: 0 auto;
+  min-height: 100vh;
 }
 
 .animeLeft {
